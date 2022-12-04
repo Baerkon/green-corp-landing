@@ -28,19 +28,19 @@ document.querySelector('#budget').addEventListener('change', function handleSele
     if (event.target.value === 'other') {
       const formContainer = document.createElement('div');
       formContainer.classList.add('form__group');
-      formContainer.classList.add('form__other-input'); // Задание 1
+      formContainer.classList.add('form__other-input');
    
       const input = document.createElement('input');
       input.placeholder = "Введите ваш вариант";
-      input.type = "text"; // Задание 2
+      input.type = "text";
         
       formContainer.appendChild(input);
-      document.querySelector('#form form').insertBefore(formContainer, document.querySelector('.form__submit')); // Задание 3
+      document.querySelector('#form form').insertBefore(formContainer, document.querySelector('.form__submit'));
     }
    
     const otherInput = document.querySelector('.form__other-input');
-    if (event.target.value !== 'other' && otherInput) { // Задание 5
-    document.querySelector('#form form').removeChild(otherInput); // Задание 4
+    if (event.target.value !== 'other' && otherInput) {
+    document.querySelector('#form form').removeChild(otherInput);
     }
   });
 
@@ -51,7 +51,6 @@ document.querySelector('#budget').addEventListener('change', function handleSele
       document.querySelector('header').classList.remove('header__scrolled');
     }
    
-    // Запуск анимации увеличения числа
     let windowBottomPosition = window.scrollY + window.innerHeight;
     let countElementPosition = document.querySelector('.features__clients-count').offsetTop;
     if (windowBottomPosition >= countElementPosition && !animationInited) {
