@@ -64,6 +64,7 @@ button {
   background-position: center;
   background-size: cover;
   overflow-x: hidden;
+  position: relative;
 }
 
 .about h1 {
@@ -378,6 +379,13 @@ footer {
 .animate__animated.animate__fadeInRight {
   --animate-duration: 2s;
   animation-iteration-count: 1;
+}
+
+.orb-canvas {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  right: 0;
 }
 
 @keyframes rotation {
